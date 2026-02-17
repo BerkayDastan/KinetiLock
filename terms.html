@@ -5,40 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kullanım Koşulları - KinetiLock</title>
     <style>
-        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 40px 20px; background: #f4f4f7; }
-        .card { background: white; padding: 45px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #e1e1e8; }
-        h1 { color: #000; font-size: 30px; border-bottom: 2px solid #007AFF; padding-bottom: 15px; margin-bottom: 30px; }
-        h2 { color: #000; font-size: 20px; margin-top: 35px; text-transform: uppercase; letter-spacing: 1px; }
-        p, li { font-size: 15px; color: #444; margin-bottom: 12px; }
-        .danger-zone { background: #fff5f5; border-left: 5px solid #ff3b30; padding: 20px; border-radius: 8px; color: #8e1f1a; font-weight: 500; margin: 25px 0; }
-        .legal-footer { margin-top: 50px; font-size: 13px; color: #999; text-align: center; line-height: 1.4; border-top: 1px solid #eee; padding-top: 20px; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h1 { color: #d4af37; border-bottom: 2px solid #d4af37; padding-bottom: 10px; font-size: 24px; }
+        h2 { color: #1a1a1a; margin-top: 25px; font-size: 18px; border-left: 4px solid #d4af37; padding-left: 10px; }
+        .meta-info { background: #fafafa; padding: 15px; border-radius: 8px; font-size: 0.9em; margin-bottom: 20px; border: 1px solid #eee; }
+        .highlight { font-weight: bold; color: #d4af37; }
+        footer { margin-top: 40px; text-align: center; font-size: 0.8em; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
+        p, li { font-size: 15px; color: #444; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Kullanım Koşulları (EULA)</h1>
-        <p><strong>Son Güncelleme:</strong> 17 Şubat 2026</p>
 
-        <div class="danger-zone">
-            ⚠️ <strong>ÖNEMLİ:</strong> KinetiLock bir "Offline Vault" uygulamasıdır. Verileriniz sunucularımızda YEDEKLENMEZ. Uygulamanın silinmesi veya şifrelerin unutulması durumunda veri kaybından kullanıcı sorumludur.
-        </div>
-
-        <h2>1. Lisans ve Kullanım</h2>
-        <p>Berkay DASTAN tarafından sunulan bu uygulama, kişisel kullanımınız içindir. Tersine mühendislik veya kopyalanması yasaktır.</p>
-
-        <h2>2. Sorumluluk Sınırı</h2>
-        <p>KinetiLock "olduğu gibi" sunulmaktadır. Yazılımsal hatalar veya cihaz arızaları nedeniyle oluşabilecek veri kayıplarından geliştirici sorumlu tutulamaz.</p>
-
-        <h2>3. Abonelikler</h2>
-        <p>Ödemeler Apple App Store üzerinden yapılır. İptal ve iade işlemleri Apple politikalarına tabidir.</p>
-
-        <h2>4. Apple Standart EULA</h2>
-        <p>Bu sözleşme Apple'ın Standart EULA şartlarını tamamlar.</p>
-
-        <div class="legal-footer">
-            © 2026 KinetiLock - Berkay DASTAN<br>
-            İletişim: dastanberkay@gmail.com
-        </div>
+<div class="container">
+    <h1>Kullanım Koşulları — KinetiLock</h1>
+    
+    <div class="meta-info">
+        <strong>Son Güncelleme:</strong> 17 Şubat 2026<br>
+        <strong>Sürüm:</strong> 1.0 (iOS)<br>
+        <strong>Geliştirici:</strong> Berkay DASTAN<br>
+        <strong>İletişim:</strong> dastanberkay@gmail.com
     </div>
+
+    <p>Bu Kullanım Koşulları, <strong>Berkay DASTAN</strong> ("Geliştirici") tarafından sunulan <strong>KinetiLock</strong> uygulamasının kullanım şartlarını belirler. Uygulamayı kullanarak bu şartları kabul etmiş sayılırsınız.</p>
+
+    <h2>1. Hizmetin Tanımı</h2>
+    <p>KinetiLock; notlar, fotoğraflar ve ses kayıtları için <strong>çift katmanlı (Decoy & Vault)</strong> koruma sağlayan bir güvenlik uygulamasıdır. Uygulama verileri bulut sunucularında değil, yalnızca kullanıcının yerel cihazında saklar.</p>
+
+    <h2>2. Abonelik ve Ödemeler</h2>
+    <ul>
+        <li><strong>Premium Özellikler:</strong> Gizli kasa (Vault) ve gelişmiş fonksiyonlar ücretli abonelik gerektirebilir.</li>
+        <li><strong>Ödeme Yönetimi:</strong> Tüm satın alma, abonelik ve iade işlemleri <strong>Apple App Store (StoreKit)</strong> üzerinden yürütülür. Geliştiricinin ödeme bilgilerine erişimi yoktur.</li>
+        <li><strong>İptal:</strong> Aboneliğinizi dilediğiniz zaman cihazınızın "Abonelikler" kısmından sonlandırabilirsiniz.</li>
+    </ul>
+
+    <h2>3. Kullanıcı Sorumluluğu ve Güvenlik</h2>
+    <p>Uygulama yerel depolama mantığıyla çalıştığı için;</p>
+    <ul>
+        <li><span class="highlight">Veri Kaybı:</span> Cihazın kaybolması, sıfırlanması veya uygulamanın silinmesi durumunda oluşacak veri kayıplarından Geliştirici sorumlu tutulamaz.</li>
+        <li><span class="highlight">Şifre Unutma:</span> Zaman şifresinin veya kurtarma kodunun unutulması durumunda verilere erişim imkansız hale gelebilir. Bu konuda sorumluluk tamamen kullanıcıya aittir.</li>
+    </ul>
+
+    <h2>4. Fikri Mülkiyet</h2>
+    <p>KinetiLock markası, logosu ve yazılım kodu Berkay DASTAN'a aittir. Kullanıcıya eklediği içerikler üzerinde tam mülkiyet hakkı tanınır; bu içerikler geliştirici tarafından görüntülenemez veya kopyalanamaz.</p>
+
+    <h2>5. Sorumluluk Sınırı</h2>
+    <p>Uygulama "olduğu gibi" sunulmaktadır. Teknik aksaklıklar, yazılım hataları veya donanım uyumsuzlukları nedeniyle oluşabilecek dolaylı zararlardan Geliştirici sorumlu değildir.</p>
+
+    <h2>6. Uygulanacak Hukuk</h2>
+    <p>Bu koşullar Türkiye Cumhuriyeti kanunlarına tabidir. Her türlü uyuşmazlıkta Türkiye mahkemeleri yetkilidir.</p>
+
+    <footer>
+        &copy; 2026 Berkay DASTAN. Tüm hakları saklıdır.<br>
+        Bu uygulama bağımsız bir geliştirici tarafından sunulmaktadır.
+    </footer>
+</div>
+
 </body>
 </html>
