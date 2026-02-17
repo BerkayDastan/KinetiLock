@@ -1,76 +1,41 @@
-Gizlilik Politikası — KinetiLock
-Son güncelleme: 17 Şubat 2026
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gizlilik Politikası - KinetiLock</title>
+    <style>
+        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #f5f5f7; }
+        .card { background: white; padding: 40px; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h1 { color: #000; font-size: 28px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: #007AFF; font-size: 20px; margin-top: 30px; }
+        p, li { font-size: 16px; color: #444; }
+        .contact { background: #f0f0f5; padding: 20px; border-radius: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Gizlilik Politikası — KinetiLock</h1>
+        <p><strong>Son güncelleme:</strong> 17 Şubat 2026</p>
+        
+        <h2>1. Veri Sorumlusu</h2>
+        <div class="contact">
+            <strong>Geliştirici:</strong> Berkay DASTAN<br>
+            <strong>İletişim:</strong> dastanberkay@gmail.com
+        </div>
 
-Geçerli olduğu uygulama: KinetiLock (iOS)
+        <h2>2. Özet: Verileriniz Nerede Kalıyor?</h2>
+        <p>KinetiLock, gizlilik öncelikli (privacy-first) bir uygulamadır. Kişisel verileriniz (notlar, günlükler, dosyalar, fotoğraflar) yalnızca sizin cihazınızda saklanır. Sunucularımıza veya üçüncü taraflara içerik iletilmez.</p>
 
-Sürüm: 1.0
+        <h2>3. Toplanan ve İşlenen Veriler</h2>
+        <ul>
+            <li><strong>Kasa İçeriği:</strong> AES-GCM ile şifreli olarak sadece cihazınızda saklanır.</li>
+            <li><strong>Biyometrik Veri:</strong> Face ID verileri Apple'ın güvenli alanında kalır, bize asla iletilmez.</li>
+            <li><strong>Hareket Verisi:</strong> Sadece cihazda işlenir, dışarı aktarılmaz.</li>
+        </ul>
 
-Bu Gizlilik Politikası, KinetiLock mobil uygulamasının (“uygulama”, “biz”, “KinetiLock”) verilerinizi nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklar. Uygulamayı indirerek ve kullanarak bu politikayı okuduğunuzu ve kabul ettiğinizi beyan etmiş sayılırsınız.
-
-1. Veri Sorumlusu
-KinetiLock uygulamasının veri sorumlusu:
-
-Geliştirici: Berkay DASTAN
-
-İletişim: dastanberkay@gmail.com
-
-Veri koruma ve gizlilik ile ilgili her türlü talebinizi yukarıdaki e-posta adresi üzerinden doğrudan iletebilirsiniz.
-
-2. Özet: Verileriniz Nerede Kalıyor?
-KinetiLock, gizlilik öncelikli (privacy-first) bir uygulamadır:
-
-Kişisel verileriniz (notlar, günlükler, dosyalar, fotoğraflar) yalnızca sizin cihazınızda saklanır.
-
-Bu veriler bizim sunucularımıza, bulut depolama servislerine (iCloud dahil) veya üçüncü taraflara içerik olarak iletilmez.
-
-Uygulama içerisinde analitik, reklam veya çökme raporlama (crash reporting) amaçlı hiçbir üçüncü taraf SDK kullanılmamaktadır.
-
-Hareket (ivmeölçer) ve Face ID verileri yalnızca cihazınızın güvenli donanımı içinde işlenir; ham veri dışarı sızdırılmaz.
-
-3. Toplanan ve İşlenen Veriler (Detaylı)
-3.1 Cihazda Saklanan Veriler
-
-Aşağıdaki veriler yalnızca cihazınızda tutulur ve hiçbir dış sunucuya gönderilmez:
-
-Dil ve Uygulama Ayarları: Arayüz dili ve kurulum durumu.
-
-Kinetik Hareket Kalıbı: Gizli hareket şifrenizin (Kinetik Ritim) yerel kaydı.
-
-Zaman Şifresi: Kadrandan seçtiğiniz kasa açılış saati.
-
-Şifreleme Anahtarları: Vault içeriğini koruyan AES-GCM anahtarları (iOS Keychain'de saklanır).
-
-Kurtarma Şifresi Özeti: Şifrenizi sıfırlamak için kullanılan SHA256 hash verisi (Keychain'de saklanır).
-
-Kasa İçeriği (Vault): Şifreli notlar, günlük metinleri ve dosyalar.
-
-Tuzak (Decoy) İçeriği: Şifrelenmemiş sahte To-Do listesi.
-
-3.2 Sensör ve Donanım Erişimi
-
-Core Motion (İvmeölçer): Sadece kinetik hareketinizi tanımak için kullanılır. Veri cihaz dışına çıkmaz.
-
-Face ID: Sadece "Tuzak" alanına hızlı giriş için kullanılır. Biyometrik verileriniz Apple'ın güvenli alanında (Secure Enclave) kalır, uygulamamız bu verilere erişemez.
-
-Kamera ve Galeri: Sadece sizin seçtiğiniz fotoğrafların günlük girişlerine eklenmesi için kullanılır.
-
-4. Üçüncü Taraflar ve Ödemeler
-Apple App Store (StoreKit 2):
-Abonelik işlemleri tamamen Apple altyapısı üzerinden yürütülür. KinetiLock, sizin kredi kartı bilgilerinize veya kimlik bilgilerinize erişemez. Satın alma işleminiz gerçekleştiğinde Apple bize sadece işlemin başarılı olduğuna dair dijital bir makbuz (receipt) gönderir. Bu süreçte Apple'ın kendi Gizlilik Politikası geçerlidir.
-
-5. Veri Saklama ve Silme (Hesap Silme Hakları)
-Sunucu Kaydı Yoktur: Uygulamanın bir sunucusu olmadığı için bir "hesap" oluşturmazsınız. Verileriniz cihazınıza bağlıdır.
-
-Veri Silme: Uygulama içerisindeki "Ayarlar > Tüm Verileri Sıfırla" seçeneği ile veya uygulamayı cihazınızdan silerek tüm verilerinizi, notlarınızı ve şifreleme anahtarlarınızı anında ve kalıcı olarak silebilirsiniz.
-
-Vanish Mode: Bu özelliği aktif ettiğinizde, yeni eklenen öğeler seçtiğiniz süre (24s, 7g, 30g) sonunda otomatik olarak cihazdan silinir.
-
-6. Çocukların Gizliliği
-KinetiLock, 13 yaş altındaki çocuklardan bilerek veri toplamaz (zaten sunucu üzerinde hiçbir veri toplamaz). Ancak ebeveynlerin, çocuklarının cihaz kullanımını denetlemesini öneririz.
-
-7. Uygulanacak Hukuk
-Bu politika, Türkiye Cumhuriyeti mevzuatına (KVKK) ve uluslararası veri koruma standartlarına (GDPR) uyumlu olacak şekilde hazırlanmıştır.
-
-8. İletişim
-Gizlilikle ilgili sorularınız veya verilerinizin silinmesine dair destek talepleriniz için:
-E-posta: dastanberkay@gmail.com
+        <h2>4. Veri Silme Hakları</h2>
+        <p>Uygulamayı sildiğinizde veya "Verileri Sıfırla" butonunu kullandığınızda tüm verileriniz kalıcı olarak yok edilir.</p>
+    </div>
+</body>
+</html>
