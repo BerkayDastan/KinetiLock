@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanım Koşulları - KinetiLock</title>
+    <style>
+        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 40px 20px; background: #f4f4f7; }
+        .card { background: white; padding: 45px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #e1e1e8; }
+        h1 { color: #000; font-size: 30px; border-bottom: 2px solid #007AFF; padding-bottom: 15px; margin-bottom: 30px; }
+        h2 { color: #000; font-size: 20px; margin-top: 35px; text-transform: uppercase; letter-spacing: 1px; }
+        p, li { font-size: 15px; color: #444; margin-bottom: 12px; }
+        .danger-zone { background: #fff5f5; border-left: 5px solid #ff3b30; padding: 20px; border-radius: 8px; color: #8e1f1a; font-weight: 500; margin: 25px 0; }
+        .legal-footer { margin-top: 50px; font-size: 13px; color: #999; text-align: center; line-height: 1.4; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Son Kullanıcı Lisans Sözleşmesi (EULA)</h1>
+        <p><strong>Son Güncelleme:</strong> 17 Şubat 2026</p>
+
+        <p>KinetiLock uygulamasını kullanarak aşağıdaki şartları kayıtsız şartsız kabul etmiş sayılırsınız. Bu şartları kabul etmiyorsanız uygulamayı derhal cihazınızdan kaldırmalısınız.</p>
+
+        <div class="danger-zone">
+            <strong>KRİTİK UYARI:</strong> KinetiLock bir "Offline Vault" (Çevrimdışı Kasa) uygulamasıdır. Geliştirici dahil hiç kimse verilerinize uzaktan erişemez. Uygulamanın silinmesi, cihazın bozulması veya şifrelerin unutulması durumunda verileriniz KALICI OLARAK KAYBOLUR. Geliştiricinin veri kurtarma yükümlülüğü yoktur.
+        </div>
+
+        <h2>1. Mülkiyet ve Kullanım Lisansı</h2>
+        <p>KinetiLock'un tüm fikri mülkiyet hakları Berkay DASTAN'a aittir. Kullanıcıya, uygulamayı kişisel ve ticari olmayan amaçlarla kullanması için devredilemez bir lisans verilir.</p>
+
+        <h2>2. Sorumluluk Reddi (Disclaimer)</h2>
+        <ul>
+            <li><strong>Veri Güvenliği:</strong> Uygulama askeri düzeyde şifreleme (AES-GCM) kullansa da, cihazınızın fiziksel güvenliğinden ve şifrelerinizin gizliliğinden siz sorumlusunuz.</li>
+            <li><strong>Teknik Arızalar:</strong> Yazılımsal veya donanımsal hatalardan dolayı yaşanabilecek veri kayıplarından geliştirici sorumlu tutulamaz.</li>
+            <li><strong>Yedekleme:</strong> Uygulama bir bulut servisi değildir. Verilerin yedeğini almak kullanıcının sorumluluğundadır (Dosya dışa aktarma yoluyla).</li>
+        </ul>
+
+        <h2>3. Abonelik ve Ödeme Şartları</h2>
+        <p>Premium özellikler Apple App Store aboneliği ile sunulur. Ödemeler Apple tarafından tahsil edilir. İptal ve iade süreçleri tamamen Apple App Store kurallarına tabidir. Geliştiricinin ödeme iadesi yapma yetkisi bulunmamaktadır.</p>
+
+        <h2>4. Yasaklı Kullanımlar</h2>
+        <p>Uygulamanın yasa dışı içeriklerin saklanması, yerel yasaların ihlali veya kötü niyetli faaliyetler için kullanılması yasaktır. Bu tür kullanımlardan doğacak her türlü hukuki sorumluluk doğrudan kullanıcıya aittir.</p>
+
+        <h2>5. Apple Standart EULA</h2>
+        <p>Bu sözleşme, Apple'ın Standart Kullanım Koşulları'nı (Standard EULA) tamamlayıcı niteliktedir. Çelişki durumunda Apple'ın standart koşulları önceliklidir.</p>
+
+        <div class="legal-footer">
+            Berkay DASTAN — dastanberkay@gmail.com<br>
+            KinetiLock bir gizlilik aracıdır ve "olduğu gibi" (AS IS) sunulmaktadır.
+        </div>
+    </div>
+</body>
+</html>
