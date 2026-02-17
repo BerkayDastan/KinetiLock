@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizlilik Politikası - KinetiLock</title>
     <style>
-        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #f5f5f7; }
-        .card { background: white; padding: 40px; border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        h1 { color: #000; font-size: 28px; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #007AFF; font-size: 20px; margin-top: 30px; }
-        p, li { font-size: 16px; color: #444; }
-        .contact { background: #f0f0f5; padding: 20px; border-radius: 10px; margin-top: 20px; }
+        body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 850px; margin: 0 auto; padding: 40px 20px; background: #f5f5f7; }
+        .card { background: white; padding: 45px; border-radius: 20px; box-shadow: 0 4px 25px rgba(0,0,0,0.06); }
+        h1 { color: #000; font-size: 32px; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 30px; }
+        h2 { color: #007AFF; font-size: 22px; margin-top: 35px; border-left: 5px solid #007AFF; padding-left: 15px; }
+        p, li { font-size: 16px; color: #444; margin-bottom: 15px; }
+        .contact-box { background: #f0f0f5; padding: 25px; border-radius: 12px; margin: 25px 0; border: 1px solid #e0e0e0; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 15px; }
+        th, td { border: 1px solid #e5e5e5; padding: 12px; text-align: left; }
+        th { background-color: #f8f8f8; color: #000; }
+        .footer { margin-top: 50px; font-size: 14px; color: #888; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
+        strong { color: #000; }
     </style>
 </head>
 <body>
@@ -18,24 +23,65 @@
         <h1>Gizlilik Politikası — KinetiLock</h1>
         <p><strong>Son güncelleme:</strong> 17 Şubat 2026</p>
         
-        <h2>1. Veri Sorumlusu</h2>
-        <div class="contact">
-            <strong>Geliştirici:</strong> Berkay DASTAN<br>
-            <strong>İletişim:</strong> dastanberkay@gmail.com
+        <div class="contact-box">
+            <strong>Veri Sorumlusu:</strong> Berkay DASTAN<br>
+            <strong>E-posta:</strong> dastanberkay@gmail.com<br>
+            <strong>Uygulama:</strong> KinetiLock (iOS)
         </div>
 
-        <h2>2. Özet: Verileriniz Nerede Kalıyor?</h2>
-        <p>KinetiLock, gizlilik öncelikli (privacy-first) bir uygulamadır. Kişisel verileriniz (notlar, günlükler, dosyalar, fotoğraflar) yalnızca sizin cihazınızda saklanır. Sunucularımıza veya üçüncü taraflara içerik iletilmez.</p>
+        <h2>1. Verileriniz Nerede Saklanır?</h2>
+        <p>KinetiLock, <strong>gizlilik öncelikli (privacy-first)</strong> bir mimariyle geliştirilmiştir. Tüm kişisel verileriniz (notlar, günlükler, dosyalar, fotoğraflar) <strong>yalnızca kullanıcı cihazında</strong> saklanır. Sunucularımıza veya herhangi bir üçüncü taraf bulut servisine veri aktarımı yapılmaz.</p>
 
-        <h2>3. Toplanan ve İşlenen Veriler</h2>
-        <ul>
-            <li><strong>Kasa İçeriği:</strong> AES-GCM ile şifreli olarak sadece cihazınızda saklanır.</li>
-            <li><strong>Biyometrik Veri:</strong> Face ID verileri Apple'ın güvenli alanında kalır, bize asla iletilmez.</li>
-            <li><strong>Hareket Verisi:</strong> Sadece cihazda işlenir, dışarı aktarılmaz.</li>
-        </ul>
+        <h2>2. Toplanan ve İşlenen Veriler</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Veri Türü</th>
+                    <th>Saklama Şekli</th>
+                    <th>Güvenlik Seviyesi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Vault İçeriği</strong></td>
+                    <td>Sadece Cihazda (SwiftData)</td>
+                    <td>AES-GCM Şifreleme</td>
+                </tr>
+                <tr>
+                    <td><strong>Biyometrik (Face ID)</strong></td>
+                    <td>Secure Enclave (Apple)</td>
+                    <td>Uygulama erişemez</td>
+                </tr>
+                <tr>
+                    <td><strong>Hareket Verisi</strong></td>
+                    <td>Cihaz Sensörü</td>
+                    <td>Kaydedilmez / Paylaşılmaz</td>
+                </tr>
+                <tr>
+                    <td><strong>Şifreler (Hash)</strong></td>
+                    <td>iOS Keychain</td>
+                    <td>SHA256 Güvenli Hash</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <h2>4. Veri Silme Hakları</h2>
-        <p>Uygulamayı sildiğinizde veya "Verileri Sıfırla" butonunu kullandığınızda tüm verileriniz kalıcı olarak yok edilir.</p>
+        <h2>3. Donanım ve Sensör Erişimi</h2>
+        <p><strong>Core Motion (İvmeölçer):</strong> Kinetik Ritim özelliğinin çalışması için gereklidir. Hareket verileriniz anlık olarak cihazda işlenir ve hiçbir yere aktarılmaz.</p>
+        <p><strong>Kamera ve Galeri:</strong> Sadece günlük girişlerinize fotoğraf eklemek istediğinizde sizin onayınızla erişilir. Fotoğraflarınız Vault klasörünüzde şifreli referanslarla tutulur.</p>
+
+        <h2>4. Abonelik ve Ödemeler</h2>
+        <p>Abonelik işlemleri Apple'ın <strong>StoreKit 2</strong> altyapısı üzerinden yürütülür. KinetiLock kredi kartı bilgilerinize veya ödeme detaylarınıza erişemez; bu veriler tamamen Apple'ın sorumluluğundadır.</p>
+
+        <h2>5. Veri Silme ve Vanish Mode</h2>
+        <p>Uygulama içerisinde yer alan <strong>"Tüm Verileri Sıfırla"</strong> butonu veya uygulamanın cihazdan kaldırılması, cihazdaki tüm şifreli verileri ve anahtarları kalıcı olarak yok eder. <strong>Vanish Mode</strong> özelliği ise belirlediğiniz süre sonunda (24s, 7g, 30g) öğeleri otomatik olarak siler.</p>
+
+        <h2>6. KVKK ve GDPR Uyumu</h2>
+        <p>KinetiLock, Türkiye Cumhuriyeti KVKK ve AB GDPR standartlarına uyumludur. Verileriniz üzerinde tam kontrol sahibisiniz. Her türlü destek talebiniz için dastanberkay@gmail.com adresinden bize ulaşabilirsiniz.</p>
+
+        <div class="footer">
+            © 2026 KinetiLock - Berkay DASTAN <br>
+            Tüm hakları saklıdır.
+        </div>
     </div>
 </body>
 </html>
