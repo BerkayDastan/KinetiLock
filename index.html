@@ -3,83 +3,643 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik Politikası - KinetiLock</title>
+
+    <title>Gizlilik Politikası — KinetiLock</title>
+
+    <meta
+        name="description"
+        content="KinetiLock iOS uygulamasının gizlilik politikası, veri saklama, şifreleme, izinler ve kullanıcı hakları hakkında bilgi."
+    >
+
     <style>
+        :root {
+            --bg: #f5f5f7;
+            --card: #ffffff;
+            --text: #222222;
+            --secondary: #666666;
+            --border: #e7e7e7;
+            --accent: #c7a74a;
+            --soft-accent: #faf7ed;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            line-height: 1.7;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 48px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 34px;
+            line-height: 1.2;
+            color: #111111;
+        }
+
+        .subtitle {
+            color: var(--secondary);
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            margin-top: 42px;
+            margin-bottom: 14px;
+            font-size: 22px;
+            color: #111111;
+            border-left: 4px solid var(--accent);
+            padding-left: 14px;
+        }
+
+        h3 {
+            margin-top: 26px;
+            font-size: 18px;
+        }
+
+        p {
+            margin: 0 0 16px 0;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #111111;
+        }
+
+        a {
+            color: #8b711f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .info-box {
+            background: var(--soft-accent);
+            border: 1px solid #eee3bd;
+            border-radius: 14px;
+            padding: 22px;
+            margin: 28px 0;
+        }
+
+        .notice {
+            background: #f8f8fa;
+            border: 1px solid var(--border);
+            border-radius: 14px;
             padding: 20px;
-            background-color: #f9f9f9;
+            margin: 24px 0;
         }
-        .container {
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 15px;
         }
-        h1 { color: #d4af37; border-bottom: 2px solid #d4af37; padding-bottom: 10px; }
-        h2 { color: #000; margin-top: 30px; border-left: 4px solid #d4af37; padding-left: 15px; }
-        .info { background: #f0f0f0; padding: 15px; border-radius: 8px; font-size: 0.9em; margin-bottom: 20px; }
-        .highlight { color: #d4af37; font-weight: bold; }
-        footer { margin-top: 50px; text-align: center; font-size: 0.8em; color: #777; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+
+        th,
+        td {
+            border: 1px solid var(--border);
+            padding: 13px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        th {
+            background: #f8f8f8;
+            color: #111111;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 650px) {
+            .page {
+                padding: 18px 12px;
+            }
+
+            .card {
+                padding: 28px 20px;
+                border-radius: 14px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 9px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>Gizlilik Politikası — KinetiLock</h1>
-    
-    <div class="info">
-        <strong>Son Güncelleme:</strong> 17 Şubat 2026<br>
-        <strong>Geliştirici:</strong> Berkay DASTAN<br>
-        <strong>İletişim:</strong> <a href="mailto:dastanberkay@gmail.com">dastanberkay@gmail.com</a>
-    </div>
+<div class="page">
+    <main class="card">
 
-    <p>Bu Gizlilik Politikası, <strong>Berkay DASTAN</strong> tarafından geliştirilen <strong>KinetiLock</strong> mobil uygulamasının gizlilik uygulamalarını açıklar. KinetiLock, gizliliği temel bir hak kabul eder ve tüm kullanıcı verilerinin kontrolünü tamamen kullanıcıya bırakır.</p>
+        <h1>Gizlilik Politikası — KinetiLock</h1>
 
-    <h2>1. Veri Sorumlusu ve İletişim</h2>
-    <p>KinetiLock uygulamasının veri sorumlusu Berkay DASTAN'dır. Gizlilikle ilgili her türlü soru, görüş ve hak talebiniz için doğrudan yukarıdaki e-posta adresi üzerinden iletişime geçebilirsiniz.</p>
+        <p class="subtitle">
+            Son güncelleme: <strong>11 Eylül 2026</strong>
+        </p>
 
-    <h2>2. Temel İlke: "Cihazda Kalır"</h2>
-    <p>KinetiLock, <strong>"Privacy by Design"</strong> (Tasarım Gereği Gizlilik) ilkesiyle geliştirilmiştir:</p>
-    <ul>
-        <li><span class="highlight">Sunucu Kullanımı Yok:</span> Verileriniz (notlar, dosyalar, şifreler) hiçbir şekilde tarafıma ait bir sunucuya veya bulut sistemine iletilmez.</li>
-        <li><span class="highlight">Analitik Yazılımı Yok:</span> Uygulama içinde kullanım alışkanlıklarınızı takip eden hiçbir üçüncü taraf analiz (SDK) veya reklam aracı bulunmamaktadır.</li>
-        <li><span class="highlight">Tam Kontrol:</span> Tüm içerik yalnızca sizin fiziksel cihazınızda saklanır. Uygulamayı sildiğinizde, tüm veriler cihazdan kalıcı olarak kaldırılır.</li>
-    </ul>
+        <div class="info-box">
+            <strong>Geliştirici:</strong> Berkay DASTAN<br>
+            <strong>Uygulama:</strong> KinetiLock (iOS)<br>
+            <strong>İletişim:</strong>
+            <a href="mailto:dastanberkay@gmail.com">
+                dastanberkay@gmail.com
+            </a>
+        </div>
 
-    <h2>3. İşlenen Veriler ve Erişim İzinleri</h2>
-    <h3>3.1. Biyometrik Veriler (Face ID)</h3>
-    <p>Uygulama, yanıltıcı not defteri alanına güvenli giriş sağlamak için Apple'ın biyometrik sistemlerini kullanır. Biyometrik verileriniz asla uygulamaya veya geliştiriciye ulaşmaz. İşlem, Apple'ın <strong>Secure Enclave</strong> donanımında gerçekleşir.</p>
+        <p>
+            Bu Gizlilik Politikası, <strong>KinetiLock</strong> mobil
+            uygulamasının kullanıcı verilerini nasıl işlediğini,
+            sakladığını ve koruduğunu açıklar.
+        </p>
 
-    <h3>3.2. Cihaz İçi Saklanan İçerikler</h3>
-    <p>Aşağıdaki veriler yerel veritabanında <strong>AES-GCM</strong> yüksek güvenlikli şifreleme standardı ile saklanır:</p>
-    <ul>
-        <li>Kasa içerikleri (notlar, günlükler, dosya adları).</li>
-        <li>Zaman Şifresi (Keychain içinde saklanan özel saat kombinasyonu).</li>
-        <li>Dil Tercihleri (TR, EN, ES).</li>
-    </ul>
+        <p>
+            KinetiLock, mümkün olduğunca az veri işleme ve kullanıcı
+            verilerini cihaz üzerinde tutma prensipleriyle geliştirilmiştir.
+        </p>
 
-    <h2>4. Üçüncü Taraf Hizmetleri</h2>
-    <p>Abonelik işlemleri tamamen <strong>Apple (StoreKit)</strong> altyapısı üzerinden yönetilir. Ödeme bilgileriniz geliştiriciye ulaşmaz ve Apple'ın kendi gizlilik politikasına tabidir.</p>
 
-    <h2>5. Veri Saklama ve Silme</h2>
-    <p>Kullanıcı tarafından belirlenen <strong>Vanish Mode</strong> (Otomatik Silinme) süresi sonunda verilerin silinmesi işlemi tamamen cihaz üzerinde gerçekleşir. Uygulamayı kaldırdığınızda veya uygulama içindeki "Verileri Sıfırla" seçeneğini kullandığınızda tüm verileriniz kalıcı olarak silinir.</p>
+        <h2>1. Temel Gizlilik İlkesi</h2>
 
-    <h2>6. Çocukların Gizliliği</h2>
-    <p>KinetiLock, 13 yaş altındaki çocuklardan bilerek veri toplamaz. Uygulama, kişisel veri koruması odaklı genel bir araçtır.</p>
+        <p>
+            KinetiLock içerisinde oluşturduğunuz veya uygulamaya
+            aktardığınız Vault içerikleri, KinetiLock tarafından
+            işletilen herhangi bir sunucuya gönderilmez.
+        </p>
 
-    <h2>7. Haklarınız</h2>
-    <p>KVKK ve GDPR uyarınca verilerinize erişme, düzeltme ve silme haklarına sahipsiniz. Verileriniz sunucularımızda tutulmadığı için bu haklarınızı uygulama içindeki yönetim araçlarıyla bizzat kullanabilirsiniz.</p>
+        <p>
+            KinetiLock'un Vault içeriklerini depolayan bir kullanıcı
+            hesabı sistemi, özel bulut sunucusu veya geliştirici
+            tarafından işletilen uzaktan veri tabanı bulunmamaktadır.
+        </p>
 
-    <footer>
-        &copy; 2026 Berkay DASTAN. Tüm hakları saklıdır.
-    </footer>
+        <ul>
+            <li>Kullanıcı hesabı oluşturmanız gerekmez.</li>
+            <li>Vault içeriği geliştirici sunucularına yüklenmez.</li>
+            <li>Vault içeriği reklam amacıyla kullanılmaz.</li>
+            <li>
+                Uygulamada kullanıcı davranışlarını takip eden üçüncü taraf
+                reklam veya analitik SDK'sı bulunmamaktadır.
+            </li>
+        </ul>
+
+
+        <h2>2. Cihazda Saklanan Veriler</h2>
+
+        <p>
+            KinetiLock özelliklerini kullanmanız halinde aşağıdaki
+            içerikler cihazınızın yerel uygulama depolama alanında
+            bulunabilir:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>İçerik</th>
+                    <th>Saklama</th>
+                    <th>Koruma</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Vault notları</td>
+                    <td>Cihaz üzerinde</td>
+                    <td>AES-GCM şifreleme</td>
+                </tr>
+
+                <tr>
+                    <td>Günlük kayıtları</td>
+                    <td>Cihaz üzerinde</td>
+                    <td>AES-GCM şifreleme</td>
+                </tr>
+
+                <tr>
+                    <td>Fotoğraflar</td>
+                    <td>Cihaz üzerinde</td>
+                    <td>AES-GCM şifreleme</td>
+                </tr>
+
+                <tr>
+                    <td>Dosyalar ve belgeler</td>
+                    <td>Cihaz üzerinde</td>
+                    <td>AES-GCM şifreleme</td>
+                </tr>
+
+                <tr>
+                    <td>Ses kayıtları</td>
+                    <td>Cihaz üzerinde</td>
+                    <td>AES-GCM şifreleme</td>
+                </tr>
+
+                <tr>
+                    <td>Decoy alanındaki özel içerikler</td>
+                    <td>Cihaz üzerinde</td>
+                    <td>Ayrı cihaz-içi şifreleme anahtarıyla korunur</td>
+                </tr>
+
+                <tr>
+                    <td>Vault erişim bilgileri</td>
+                    <td>iOS Keychain</td>
+                    <td>Güvenli parola türetme ve Keychain koruması</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <p>
+            KinetiLock tarafından oluşturulan hassas Vault dosyaları
+            kalıcı depolamada okunabilir fotoğraf, ses veya belge
+            formatında saklanmak yerine şifrelenmiş biçimde tutulur.
+        </p>
+
+
+        <h2>3. Şifreleme ve Güvenlik</h2>
+
+        <p>
+            KinetiLock, hassas Vault içeriklerini cihaz üzerinde
+            korumak için <strong>AES-GCM</strong> şifreleme kullanır.
+        </p>
+
+        <p>
+            Şifreleme anahtarları ve hassas kimlik doğrulama bilgileri
+            uygun olduğu durumlarda <strong>iOS Keychain</strong>
+            kullanılarak korunur.
+        </p>
+
+        <p>
+            Kullanıcı parolaları uygulama içerisinde düz metin olarak
+            saklanmaz. Parola doğrulaması için güvenli parola türetme
+            mekanizmaları kullanılır.
+        </p>
+
+        <div class="notice">
+            Hiçbir yazılım veya güvenlik sistemi mutlak güvenlik
+            garantisi sağlayamaz. KinetiLock, kullanıcı verilerinin
+            korunması için modern iOS güvenlik mekanizmalarını ve
+            şifreleme yöntemlerini kullanacak şekilde tasarlanmıştır.
+        </div>
+
+
+        <h2>4. Face ID ve Biyometrik Veriler</h2>
+
+        <p>
+            KinetiLock bazı giriş ve güvenlik işlemleri için Apple'ın
+            Face ID / biyometrik kimlik doğrulama sistemlerinden
+            yararlanabilir.
+        </p>
+
+        <p>
+            KinetiLock yüz görüntünüzü, Face ID biyometrik şablonunuzu
+            veya diğer biyometrik verilerinizi alamaz, görüntüleyemez
+            veya kendi veritabanında saklayamaz.
+        </p>
+
+        <p>
+            Biyometrik doğrulama Apple tarafından işletim sistemi
+            seviyesinde gerçekleştirilir ve uygulamaya yalnızca
+            doğrulamanın başarılı veya başarısız olduğuna ilişkin
+            sonuç iletilir.
+        </p>
+
+
+        <h2>5. Kamera, Fotoğraf ve Mikrofon İzinleri</h2>
+
+        <h3>Kamera</h3>
+
+        <p>
+            Kamera izni yalnızca kullanıcının KinetiLock içerisinde
+            fotoğraf çekmek istemesi halinde kullanılır.
+        </p>
+
+        <p>
+            Uygulama içindeki kamera ile oluşturulan içerik KinetiLock
+            Vault alanına aktarılabilir ve cihaz üzerinde şifreli
+            biçimde saklanır.
+        </p>
+
+
+        <h3>Fotoğraf Arşivi</h3>
+
+        <p>
+            Fotoğraf arşivi erişimi yalnızca kullanıcının mevcut
+            fotoğraflarından Vault'a içerik eklemeyi seçmesi halinde
+            kullanılır.
+        </p>
+
+
+        <h3>Mikrofon</h3>
+
+        <p>
+            Mikrofon erişimi yalnızca kullanıcı KinetiLock içerisindeki
+            ses kaydı özelliğini aktif olarak kullandığında gereklidir.
+        </p>
+
+        <p>
+            KinetiLock bu izinleri arka planda reklam, profil oluşturma
+            veya kullanıcı takibi amacıyla kullanmaz.
+        </p>
+
+
+        <h2>6. Geçici Dosyalar</h2>
+
+        <p>
+            Bazı iOS özellikleri, örneğin belge önizleme veya ses
+            oynatma sırasında, şifrelenmiş bir içeriğin geçici olarak
+            çözülmesini gerektirebilir.
+        </p>
+
+        <p>
+            Bu tür geçici içerikler KinetiLock'un kalıcı Vault
+            depolamasında açık biçimde saklanmaz. Uygulama bu geçici
+            dosyaları kullanım sonrasında, Vault kilitlendiğinde veya
+            uygun uygulama yaşam döngüsü olaylarında temizlemek üzere
+            tasarlanmıştır.
+        </p>
+
+
+        <h2>7. Yedekleme</h2>
+
+        <p>
+            KinetiLock, uygulama tarafından yönetilen özel Vault ve
+            Decoy depolama alanlarını sistem yedeklemelerine dahil
+            edilmemesi için işaretler.
+        </p>
+
+        <p>
+            KinetiLock kendi sunucuları üzerinden iCloud senkronizasyonu,
+            özel bulut yedeklemesi veya uzaktan Vault senkronizasyonu
+            sağlamaz.
+        </p>
+
+
+        <h2>8. Vanish Mode</h2>
+
+        <p>
+            Vanish Mode etkinleştirildiğinde belirlenen süreyi geçen
+            uygun içerikler uygulamanın yerel depolama alanından
+            otomatik olarak kaldırılır.
+        </p>
+
+        <p>
+            İlişkili uygulama kayıtları ve KinetiLock tarafından
+            yönetilen şifreli dosyalar da silme işlemine dahil edilir.
+        </p>
+
+
+        <h2>9. Verilerin Silinmesi</h2>
+
+        <p>
+            Kullanıcılar KinetiLock içerisindeki içerikleri ayrı ayrı
+            silebilir veya uygulamadaki
+            <strong>Tüm Verileri Sıfırla</strong> özelliğini kullanabilir.
+        </p>
+
+        <p>
+            Tüm Verileri Sıfırla işlemi kapsamında KinetiLock tarafından
+            yönetilen yerel Vault ve Decoy içerikleri, ilişkili şifreli
+            dosyalar, geçici uygulama dosyaları ve ilgili uygulama
+            güvenlik bilgileri kaldırılır.
+        </p>
+
+        <p>
+            Uygulama cihazdan kaldırıldığında iOS, uygulamanın yerel
+            uygulama konteynerini kaldırır.
+        </p>
+
+        <p>
+            iOS Keychain öğelerinin uygulama kaldırılması sonrasındaki
+            davranışı işletim sistemi tarafından yönetilebilir.
+            KinetiLock, yeni bir kurulum algılandığında kendisine ait
+            eski yerel güvenlik bilgilerinin temizlenmesini sağlayacak
+            şekilde tasarlanmıştır.
+        </p>
+
+        <p>
+            Mobil cihazların depolama mimarisi nedeniyle KinetiLock,
+            silinen verilerin adli veri kurtarma yöntemleriyle hiçbir
+            koşul altında geri getirilemeyeceği yönünde mutlak bir
+            garanti vermez.
+        </p>
+
+
+        <h2>10. Analitik, Reklam ve Takip</h2>
+
+        <p>
+            Mevcut KinetiLock sürümünde:
+        </p>
+
+        <ul>
+            <li>Üçüncü taraf reklam SDK'sı bulunmamaktadır.</li>
+            <li>Kullanıcı davranışlarını izleyen analitik SDK'sı bulunmamaktadır.</li>
+            <li>Vault içeriğine ilişkin telemetri gönderilmemektedir.</li>
+            <li>Kullanıcılar reklam amacıyla takip edilmemektedir.</li>
+        </ul>
+
+        <p>
+            Bu davranışın ileride değişmesi halinde Gizlilik Politikası
+            ve ilgili App Store gizlilik beyanları güncellenecektir.
+        </p>
+
+
+        <h2>11. Abonelikler ve Apple StoreKit</h2>
+
+        <p>
+            Uygulamada sunulan ücretli özellikler veya abonelikler
+            Apple'ın <strong>App Store / StoreKit</strong> altyapısı
+            üzerinden gerçekleştirilebilir.
+        </p>
+
+        <p>
+            KinetiLock kredi kartı numaranızı veya diğer ödeme kartı
+            bilgilerinizi doğrudan almaz veya saklamaz.
+        </p>
+
+        <p>
+            Ödeme ve satın alma işlemlerine ilişkin bilgiler Apple
+            tarafından kendi sözleşmeleri ve gizlilik politikaları
+            kapsamında işlenir.
+        </p>
+
+        <p>
+            KinetiLock yalnızca kullanıcının ilgili uygulama içi satın
+            alma veya abonelik hakkına sahip olup olmadığını belirlemek
+            amacıyla Apple tarafından sağlanan satın alma durumundan
+            yararlanabilir.
+        </p>
+
+
+        <h2>12. Destek İçin Gönderilen Bilgiler</h2>
+
+        <p>
+            KinetiLock uygulaması Vault içeriğinizi geliştiriciye
+            otomatik olarak göndermez.
+        </p>
+
+        <p>
+            Ancak kullanıcı kendi isteğiyle
+            <a href="mailto:dastanberkay@gmail.com">
+                dastanberkay@gmail.com
+            </a>
+            adresine destek talebi gönderirse, e-posta adresi ve
+            kullanıcının mesajında gönüllü olarak paylaştığı bilgiler
+            destek talebinin yanıtlanması amacıyla işlenebilir.
+        </p>
+
+        <p>
+            Destek mesajları e-posta hizmet sağlayıcısının altyapısı
+            üzerinden işlenebilir. Kullanıcıların destek mesajlarında
+            Vault parolaları, özel şifreleme anahtarları veya hassas
+            Vault içerikleri paylaşmaması önerilir.
+        </p>
+
+
+        <h2>13. Çocukların Gizliliği</h2>
+
+        <p>
+            KinetiLock özellikle çocukları hedefleyen bir hizmet
+            değildir ve geliştirici uygulama aracılığıyla çocuklara
+            ilişkin kişisel verileri bilerek toplamayı amaçlamaz.
+        </p>
+
+
+        <h2>14. Kullanıcı Hakları</h2>
+
+        <p>
+            KinetiLock'un ana Vault içeriği geliştiricinin sunucularında
+            tutulmadığından geliştirici bu içeriklere erişemez ve
+            kullanıcı adına Vault içeriğini görüntüleyemez, değiştiremez
+            veya geri getiremez.
+        </p>
+
+        <p>
+            Kullanıcılar uygulama içerisinde kendi içeriklerini
+            görüntüleme, düzenleme ve silme kontrollerine sahiptir.
+        </p>
+
+        <p>
+            Gizlilik uygulamaları veya bu politika hakkında soru ve
+            talepler için geliştiriciyle aşağıdaki adresten iletişime
+            geçilebilir:
+        </p>
+
+        <p>
+            <strong>E-posta:</strong>
+            <a href="mailto:dastanberkay@gmail.com">
+                dastanberkay@gmail.com
+            </a>
+        </p>
+
+
+        <h2>15. KVKK ve Diğer Veri Koruma Mevzuatı</h2>
+
+        <p>
+            KinetiLock veri minimizasyonu, cihaz-içi işleme ve
+            gizlilik-by-design prensipleri dikkate alınarak
+            geliştirilmiştir.
+        </p>
+
+        <p>
+            6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)
+            veya uygulanabilir diğer veri koruma mevzuatı kapsamındaki
+            soru ve talepleriniz için belirtilen iletişim adresinden
+            geliştiriciye ulaşabilirsiniz.
+        </p>
+
+        <p>
+            Bu politika, belirli bir kullanıcı veya kullanım senaryosu
+            için hukuki danışmanlık niteliği taşımaz.
+        </p>
+
+
+        <h2>16. Gizlilik Politikasındaki Değişiklikler</h2>
+
+        <p>
+            KinetiLock'un özelliklerinde, veri işleme yöntemlerinde veya
+            yasal gerekliliklerde değişiklik olması halinde bu Gizlilik
+            Politikası güncellenebilir.
+        </p>
+
+        <p>
+            Güncel sürümün tarihi bu sayfanın üst bölümünde
+            yayınlanacaktır.
+        </p>
+
+
+        <h2>17. İletişim</h2>
+
+        <div class="info-box">
+            <strong>KinetiLock</strong><br>
+            Geliştirici: Berkay DASTAN<br>
+            E-posta:
+            <a href="mailto:dastanberkay@gmail.com">
+                dastanberkay@gmail.com
+            </a>
+        </div>
+
+
+        <footer>
+            © 2026 Berkay DASTAN — KinetiLock<br>
+            Tüm hakları saklıdır.
+        </footer>
+
+    </main>
 </div>
 
 </body>
